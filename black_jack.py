@@ -6,44 +6,73 @@
 
 # import random
 
+# class Black_Jack():
+#     def __init__(self,name, value):
+#         self.name = name 
+#         self.value = value
+        
+
+# tref2 = Black_Jack('tref2',2)
+# tref3 = Black_Jack('tref3',3)
+# tref4 = Black_Jack('tref4',4)
+# tref5 = Black_Jack('tref5',5)
+# tref6 = Black_Jack('tref6',6)
+# tref7 = Black_Jack('tref7',7)
+# tref8 = Black_Jack('tref8',8)
+# tref9 = Black_Jack('tref9',9)
+# tref10 = Black_Jack('tref10',10)
+# trefjubi = Black_Jack('tref jubi',10)
+# trefdama = Black_Jack('tref dáma',10)
+# trefkiraly = Black_Jack('tref király',10)
+# trefasz = Black_Jack('tref ász',10)
+
+
+# deck = [tref2, tref3, tref4, tref5, tref6, tref7, tref8, tref9, tref10, trefjubi ,trefkiraly, trefdama, trefasz]
 
 
 
 import random
 
 
-class Black_Jack():
-    def __init__(self,name, value):
-        self.name = name 
-        self.value = value
-        
 
-tref2 = Black_Jack('tref2',2)
-tref3 = Black_Jack('tref3',3)
-tref4 = Black_Jack('tref4',4)
-tref5 = Black_Jack('tref5',5)
-tref6 = Black_Jack('tref6',6)
-tref7 = Black_Jack('tref7',7)
-tref8 = Black_Jack('tref8',8)
-tref9 = Black_Jack('tref9',9)
-tref10 = Black_Jack('tref10',10)
-trefjubi = Black_Jack('tref jubi',10)
-trefdama = Black_Jack('tref dáma',10)
-trefkiraly = Black_Jack('tref király',10)
-trefasz = Black_Jack('tref ász',10)
+#!
+deck = {
+    'tref2':2,
+    'tref3':3,
+    'tref4':4,
+    'tref5':5,
+    'terf6':6,
+    'tref7':7,
+    'tref8':8,
+    'terf9':9,
+    'tref10':10,
+    'trefjumbo':10,
+    'trefdama':10,
+    'trefkiraly':10,
+    'trefasz': 11,
+    'trefasz2':1
+}
+
+dealerhand = random.choice(list(deck))
+dh = deck.get(dealerhand)
+deck.pop(dealerhand)
 
 
-deck = [tref2, tref3, tref4, tref5, tref6, tref7, tref8, tref9, tref10, trefjubi ,trefkiraly, trefdama, trefasz]
-
-dealerhand = random.choice(deck)
-personhand = random.choice(deck)
-pv = int(list((personhand.value)))
-dv = int(list((dealerhand.value)))
-print(f'a kezedben {personhand.name} van aminek az értéke {personhand.value}. A dealer kezében pedig {dealerhand.name} van aminek az értéke {dealerhand.value} ')
-input('akarod folytatni (I/N)')
-if input == 'I':
-    pv = pv + personhand.value
-print(pv)
+personhand = random.choice(list(deck))
+ph = deck.get(personhand)
+deck.pop(personhand)
+#?
+if personhand == 'trefasz' or 'trefasz2':
+    pass
+#?
+print(f'a kezedben {personhand} van aminek az értéke {ph}. A dealer kezében pedig {dealerhand} van aminek az értéke {dh} ')
+valasz = ''
+while valasz.capitalize() != 'N':
+    valasz = input('akarod folytatni (I/N)')
+    if valasz.capitalize() == 'I':
+        personhand2 = random.choice(list(deck))
+        ph += deck.get(personhand2)
+        print(f'a kezedben {personhand} es egy {personhand2} van amiknek az értéke {ph}.')
     
     
 
