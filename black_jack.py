@@ -72,8 +72,28 @@ while valasz.capitalize() != 'N':
     if valasz.capitalize() == 'I':
         personhand2 = random.choice(list(deck))
         ph += deck.get(personhand2)
-        print(f'a kezedben {personhand} es egy {personhand2} van amiknek az értéke {ph}.')
-    
+        deck.pop(personhand2)
+        dealerhand2 = random.choice(list(deck))
+        dh += deck.get(dealerhand2)
+        deck.pop(dealerhand2)
+    else:
+        if ph < 21 and dh > 21:
+            print('nyertél')
+        else:
+            print('vesztettél')
+        pass
+print(f'a kezedben {personhand} es egy {personhand2} van amiknek az értéke {ph}. A dealer kezében {dealerhand} és egy {dealerhand2} van, aminek az értéke {dh}')
+valasz2 = input('Akarod folytatni a játékot? (I/N)')
+if valasz2.capitalize() == 'I' :
+    personhand3 = random.choice(list(deck))
+    ph += deck.get(personhand3)
+    deck.pop(personhand3)
+    dealerhand3 = random.choice(list(deck))
+    dh += deck.get(dealerhand3)
+    deck.pop(dealerhand3)
+    print(f'A kezedben {personhand}, {personhand2}, és egy {personhand3} van aminek az értéke {ph}. A dealer kezében egy {dealerhand}, {dealerhand2} és egy {dealerhand3} van. Az ő értéke {dh}.')
+else:
+    if ph     
     
 
 
