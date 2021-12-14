@@ -96,8 +96,16 @@ while valasz.capitalize() != 'N':
         dh += deck.get(dealerhand3)
         deck.pop(dealerhand3)
         print(f'A kezedben {personhand}, {personhand2}, és egy {personhand3} van aminek az értéke {ph}. A dealer kezében egy {dealerhand}, {dealerhand2} és egy {dealerhand3} van. Az ő értéke {dh}.')
+    elif dh > ph and dh<= 21 or ph>21 and dh <= 21:
+        print('A dealer nyert')
+    elif dh == ph and dh <=21 :
+        print('döntetlen')
+    elif dh and ph > 21:
+        print('Mind a ketten vesztettetek')
     else:
-            pass     
+        print('NYERTÉL')
+        break
+     
     
 
 
