@@ -1,0 +1,18 @@
+if d_hand > p_hand and d_hand <= 21 or p_hand > 21 and d_hand <= 21: 
+----> dealer won 
+
+elif d_hand == p_hand and d_hand <= 21:
+----> tie 
+
+ elif d_hand and p_hand > 21:
+-----> lose lose 
+
+egy elifbe pedig 
+
+
+
+mindegyik korben be kell ezeket tenni mert csak akkor lehet mindig
+kiszallnia ha meg tovabbmegy akkor nemtuodm
+
+
+xd lehet fogyatekos vagyok es csak egyszer kell 

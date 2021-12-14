@@ -93,7 +93,7 @@ if valasz2.capitalize() == 'I' :
     deck.pop(dealerhand3)
     print(f'A kezedben {personhand}, {personhand2}, és egy {personhand3} van aminek az értéke {ph}. A dealer kezében egy {dealerhand}, {dealerhand2} és egy {dealerhand3} van. Az ő értéke {dh}.')
 else:
-    if ph     
+    pass     
     
 
 
