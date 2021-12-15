@@ -1,16 +1,16 @@
 # kell: deck(dictionary) kartya value
 # kell egy list a handben levo kartyaknak
-#  oszto def ami ki is veszi a kartyat a deckbol es bele teszi a handbe 
-#  kell egy fugveny ami megmeri a kartya erteket es megnezi hogy nem tobb e 21 nél --> ha tobb akkor print vege es futtassa ujra 
-# EZ AZ EGESZ PEDIG EGY WHILE LOOPBA KENE HOGY FUSSON 
+#  oszto def ami ki is veszi a kartyat a deckbol es bele teszi a handbe
+#  kell egy fugveny ami megmeri a kartya erteket es megnezi hogy nem tobb e 21 nél --> ha tobb akkor print vege es futtassa ujra
+# EZ AZ EGESZ PEDIG EGY WHILE LOOPBA KENE HOGY FUSSON
 
 # import random
 
 # class Black_Jack():
 #     def __init__(self,name, value):
-#         self.name = name 
+#         self.name = name
 #         self.value = value
-        
+
 
 # tref2 = Black_Jack('tref2',2)
 # tref3 = Black_Jack('tref3',3)
@@ -30,27 +30,25 @@
 # deck = [tref2, tref3, tref4, tref5, tref6, tref7, tref8, tref9, tref10, trefjubi ,trefkiraly, trefdama, trefasz]
 
 
-
 import random
-
 
 
 #!
 deck = {
-    'tref2':2,
-    'tref3':3,
-    'tref4':4,
-    'tref5':5,
-    'terf6':6,
-    'tref7':7,
-    'tref8':8,
-    'terf9':9,
-    'tref10':10,
-    'trefjumbo':10,
-    'trefdama':10,
-    'trefkiraly':10,
-    'trefasz': 11,
-    'trefasz2':1
+    'tref2': 2,
+    'tref3': 3,
+    'tref4': 4,
+    'tref5': 5,
+    'terf6': 6,
+    'tref7': 7,
+    'tref8': 8,
+    'terf9': 9,
+    'tref10': 10,
+    'trefjumbo': 10,
+    'trefdama': 10,
+    'trefkiraly': 10,
+    'tefasz': 11,
+    'tefasz2': 1
 }
 
 dealerhand = random.choice(list(deck))
@@ -61,10 +59,10 @@ deck.pop(dealerhand)
 personhand = random.choice(list(deck))
 ph = deck.get(personhand)
 deck.pop(personhand)
-#?
-if personhand == 'trefasz' or 'trefasz2':
+# ?
+if personhand == 'tefasz' or 'tefasz2':
     pass
-#?
+# ?
 print(f'a kezedben {personhand} van aminek az értéke {ph}. A dealer kezében pedig {dealerhand} van aminek az értéke {dh} ')
 valasz = ''
 while valasz.capitalize() != 'N':
@@ -72,20 +70,9 @@ while valasz.capitalize() != 'N':
     if valasz.capitalize() == 'I':
         personhand2 = random.choice(list(deck))
         ph += deck.get(personhand2)
-        print(f'a kezedben {personhand} es egy {personhand2} van amiknek az értéke {ph}.')
-    
-    
-
-
-
-
-
-
-
-
-
-
-
+        print(
+            f'a kezedben {personhand} es egy {personhand2} van amiknek az értéke {ph}.')
+        # ha sok a hand, kiirhatna az erteket kulon fileba
 
 
 # hozaado = random.choice(deck)
@@ -111,7 +98,6 @@ while valasz.capitalize() != 'N':
 # }
 
 
-
 # hand = []
 
 # deck_list = list(deck_dictionari.items())
@@ -119,10 +105,8 @@ while valasz.capitalize() != 'N':
 # adding = hand.append(random.choice(deck_list))
 
 # with open('jatekos pontok.txt', 'w') as file:
-#     iras = str(hand) 
+#     iras = str(hand)
 #     line1 = file.write(iras)
-    
-
 
 
 # # print(line1)
@@ -137,7 +121,3 @@ while valasz.capitalize() != 'N':
 #     else:
 #         input('akarsz még játszani?')
 #     exit
-
-
-
-
