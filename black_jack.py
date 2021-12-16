@@ -19,6 +19,8 @@ deck = {
     'tefasz2': 1
 }
 
+
+
 dealerhand = random.choice(list(deck))
 dh = deck.get(dealerhand)
 deck.pop(dealerhand)
@@ -33,7 +35,7 @@ if personhand == 'tefasz' or 'tefasz2':
 # ?
 print(f'a kezedben {personhand} van aminek az értéke {ph}. A dealer kezében pedig {dealerhand} van aminek az értéke {dh} ')
 valasz = ''
-while valasz.capitalize() != 'N':
+while valasz.capitalize() != 'N' and ph and dh < 21:
     valasz = input('akarod folytatni (I/N)')
     if valasz.capitalize() == 'I':
         personhand2 = random.choice(list(deck))
@@ -42,19 +44,19 @@ while valasz.capitalize() != 'N':
         dealerhand2 = random.choice(list(deck))
         dh += deck.get(dealerhand2)
         deck.pop(dealerhand2)
-    else:
-        break
-    if ph > 21:
-        break
-    elif dh > ph and dh <= 21 or ph > 21 and dh <= 21:
-        print('A dealer nyert')
-    elif dh == ph and dh <= 21:
-        print('döntetlen')
-    elif dh and ph > 21:
-        print('Mind a ketten vesztettetek')
-    else:
-        print('NYERTÉL')
-        break
+    # else:
+    #     break
+    # if ph > 21:
+    #     break
+    # elif dh > ph and dh <= 21 or ph > 21 and dh <= 21:
+    #     print('A dealer nyert')
+    # elif dh == ph and dh <= 21:
+    #     print('döntetlen')
+    # elif dh and ph > 21:
+    #     print('Mind a ketten vesztettetek')
+    # else:
+    #     print('NYERTÉL')
+    #     break
     print(f'a kezedben {personhand} es egy {personhand2} van amiknek az értéke {ph}. A dealer kezében {dealerhand} és egy {dealerhand2} van, aminek az értéke {dh}')
     valasz = input('Akarod folytatni a játékot? (I/N)')
     if valasz.capitalize() == 'I':
@@ -71,5 +73,4 @@ elif dh == ph and dh <= 21:
     print('döntetlen')
 elif dh and ph > 21:
     print('Mind a ketten vesztettetek')
-else:
-    print('NYERTÉL')
+
