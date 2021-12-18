@@ -1,7 +1,13 @@
-add ph dh -->  megkerzedi hogy akarod e folytatni 
+function blackjack 
 
-ha igen --> while loop add ph2 dh2 --> print ph dh --> check ph dh < 21 --> 
-ha igen akkor break 
-ha nem akkor elif ph > dh akkor person nyert 
-elif dh > ph akkor dealer nyert 
-elif ha dh == ph akkor tie 		
+alap game function amibol a a tobbi kis function kiagazik 
+
+
+kell egy oszto def aminek az inputja a deck
+kell egy play again 
+
+
+csütörtök 17-18 jan 6 !!!!
+zoom 
+sms
+nev es cim a szamlazashoz  

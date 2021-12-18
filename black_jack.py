@@ -72,5 +72,7 @@ if dh > ph and dh <= 21 or ph > 21 and dh <= 21:
 elif dh == ph and dh <= 21:
     print('döntetlen')
 elif dh and ph > 21:
-    print('Mind a ketten vesztettetek')
+    print('Mind a ketten vesztettetek') ú
+    
+
 
