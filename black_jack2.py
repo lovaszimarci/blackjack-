@@ -19,7 +19,7 @@ deck = {
 #a personhand kivalaszt egy random lapot a personnak a deckbol
 personhand = random.choice(list(deck))
 # ph a personhand erteke int be 
-ph = []
+
 # a dealerhand kivalaszt egy random lapot a dealernek a deckbol
 dealerhand = random.choice(list(deck))
 # a dh a dealerhand erteke intben 
@@ -30,19 +30,17 @@ dh =  []
 
 # ez a function kiosztja a lapokat
 def osztas():
-    # hozza adja a ph hoz a pershonhand erteket
-    ph.append(deck.get(personhand))
-    #kiveszi a deckbol a person lapjat
-    deck.pop(personhand)
-    #ugyanez a dealerrel 
-    dh.append(deck.get(dealerhand))
-    deck.pop(dealerhand)
-    return None
+   hand = []
+   ph = []
+   ph.append(random.choice(list(deck)))
+   hand.append(ph)
+   return None
+
 
 
 # kiijra a pontszamokat
 def printpontszamok():
-    return print(f'a húzott lap {dealerhand}, a lapjaid összege {ph}')
+    return print(f'a húzott lap {ph}, a lapjaid összege {hand}')
 
 
 
@@ -82,8 +80,9 @@ def game():
         osztas()
         printpontszamok()
         akarszjatszanikerdojel()
-    osszegzes()
-
+    else:
+        break
+return osszegzes()
     
 
 
